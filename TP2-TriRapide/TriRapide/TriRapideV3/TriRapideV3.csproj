@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>d278ecbd-e8ee-4679-a3b9-8450b74a4717</ProjectGuid>
+    <ProjectGuid>{FD837B80-C8B7-4757-A8D3-E71E0735C7CA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TriRapideV3</RootNamespace>

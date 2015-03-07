@@ -7,7 +7,7 @@
     <ProjectGuid>{813625FB-A1FE-4733-B833-766755904CE1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TriRapide_VersionSequentielle</RootNamespace>
+    <RootNamespace>TriRapide</RootNamespace>
     <AssemblyName>TriRapide-VersionSequentielle</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

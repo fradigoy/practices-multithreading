@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriRapide-VersionSequentielle", "TriRapide-VersionSequentielle\TriRapide-VersionSequentielle.csproj", "{813625FB-A1FE-4733-B833-766755904CE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriRapide-VersionMultiThreadsV2", "TriRapide-VersionMultiThreadsV2\TriRapide-VersionMultiThreadsV2.csproj", "{9C5E4B19-6219-4117-8C45-0EFC433C6411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriRapideV3", "TriRapideV3\TriRapideV3.csproj", "{FD837B80-C8B7-4757-A8D3-E71E0735C7CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{813625FB-A1FE-4733-B833-766755904CE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{813625FB-A1FE-4733-B833-766755904CE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{813625FB-A1FE-4733-B833-766755904CE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C5E4B19-6219-4117-8C45-0EFC433C6411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C5E4B19-6219-4117-8C45-0EFC433C6411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C5E4B19-6219-4117-8C45-0EFC433C6411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C5E4B19-6219-4117-8C45-0EFC433C6411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD837B80-C8B7-4757-A8D3-E71E0735C7CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD837B80-C8B7-4757-A8D3-E71E0735C7CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD837B80-C8B7-4757-A8D3-E71E0735C7CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD837B80-C8B7-4757-A8D3-E71E0735C7CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
