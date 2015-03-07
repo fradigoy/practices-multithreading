@@ -13,78 +13,71 @@ namespace HorlogeTP
 {
     public partial class Form1 : Form
     {
- private TypeDate LeFormatDate = TypeDate.DateEtHeure;
+        public static int TIC_TAC_HORLOGE = 500;
+        private TypeDate m_leFormatDate;
+        private Thread m_timeUpdate;
 
-        private Thread timeUpdate;
-
-        #region Init_Form
         public Form1()
         {
             InitializeComponent();
-        }
-        #endregion
 
-        #region Event Timer
-        private void timerRefreshTime_Tick(object sender, EventArgs e)
-        {
-            UpdateTimeUi();
-           
         }
-        #endregion
 
         #region Radio_CheckChanged
         private void RadioFull_CheckedChanged(object sender, EventArgs e)
         {
-            this.LeFormatDate = TypeDate.DateEtHeure;
-            this.ForceRefreshTime();
-        }
-
-        private void InvokeUpdateTimeUi()
-        {
-            MethodInvoker invoke = delegate
-            {
-                this.UpdateTimeUi();
-            };
-            this.Invoke(invoke);
-        }
-
-        private void ForceRefreshTime()
-        {
-
-            this.timeUpdate = new Thread(InvokeUpdateTimeUi);
-            this.timeUpdate.Start();
+            this.m_leFormatDate = TypeDate.DateEtHeure;
+            this.RefreshTimeUI();
         }
 
         private void radioDay_CheckedChanged(object sender, EventArgs e)
         {
-            this.LeFormatDate = TypeDate.Date;
-            this.ForceRefreshTime();
+            this.m_leFormatDate = TypeDate.Date;
+            this.RefreshTimeUI();
         }
 
         private void radioTime_CheckedChanged(object sender, EventArgs e)
         {
-            this.LeFormatDate = TypeDate.Heure;
-            this.ForceRefreshTime();
+            this.m_leFormatDate = TypeDate.Heure;
+            this.RefreshTimeUI();
         }
         #endregion
 
-        #region Closing
-        private void Fermeture(object sender, FormClosingEventArgs e)
+        
+        private void updateTime()
         {
-            this.timeUpdate.Abort();
-            Application.ExitThread();
+            while (true)
+            {
+                this.RefreshTimeUI();
+                System.Threading.Thread.Sleep(TIC_TAC_HORLOGE);
+            }
         }
-        #endregion
 
-        private void UpdateTimeUi()
+
+
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            this.LabelHorloge.Text = this.GenererDate();
+            this.m_timeUpdate = new Thread(updateTime);
+            this.m_timeUpdate.IsBackground = true;
+            this.m_timeUpdate.Start();
+
+        }
+
+        private void RefreshTimeUI()
+        {
+            MethodInvoker invoker = delegate
+            {
+                this.LabelHorloge.Text = this.GenererDate();
+            };
+
+            this.Invoke(invoker);
         }
 
         private string GenererDate()
         {
             string date = null;
-            switch (this.LeFormatDate)
+            switch (this.m_leFormatDate)
             {
                 case TypeDate.Date:
                     date = DateTime.Now.ToShortDateString();
@@ -98,10 +91,17 @@ namespace HorlogeTP
             }
             return date;
         }
-       
+
+        private void Fermeture(object sender, FormClosingEventArgs e)
+        {
+            this.m_timeUpdate.Abort();
+            Application.ExitThread();
+        }
     }
 
-
+    /// <summary>
+    /// enumération des choix du radio group
+    /// </summary>
     public enum TypeDate
     {
         Date,
