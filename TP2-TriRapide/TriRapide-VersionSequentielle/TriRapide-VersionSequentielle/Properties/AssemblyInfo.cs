@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de 
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("TP2-TriRapide")]
+[assembly: AssemblyTitle("TriRapide-VersionSequentielle")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TP2-TriRapide")]
+[assembly: AssemblyProduct("TriRapide-VersionSequentielle")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-[assembly: Guid("95aa7046-56cf-4f43-9973-165217af16b8")]
+[assembly: Guid("36c60fd4-9585-42f4-bea2-38063d0de4ae")]
 
 // Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 //
