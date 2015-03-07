@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Projet : TP 1 multi-threading
+//Auteur : Radigoy frederic
+//
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
