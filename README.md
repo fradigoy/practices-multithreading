@@ -1,5 +1,6 @@
 # TPs-MultiThreading
 
+  - TP - Horloge
   - TP1 
 
   - TP2 - Tri Rapide:
@@ -8,6 +9,7 @@
       - Version Multi-Threads (v3)
   
   - TP3 - Background Worker
+  
   
 
   
