@@ -1,4 +1,4 @@
-# TPs-MultiThreading
+# Practices-MultiThreading
 
   - TP - Horloge
   - TP1 
